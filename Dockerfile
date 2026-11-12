@@ -2,7 +2,7 @@
 # .devcontainer/devcontainer.json via "image": "claude-sandbox:latest".
 FROM node:20-bookworm
 
-RUN apt-get update && apt-get install -y --no-install-recommends \
+RUN apt-get update && apt-get install -y --no-install-recommends && apt-get install -y gh \
       git curl ca-certificates ripgrep less jq unzip ruby \
     && rm -rf /var/lib/apt/lists/*
 
